@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:potterpedia/main.dart';
 import 'package:potterpedia/widgets/item_spell.dart';
-import 'package:provider/provider.dart';
 
 import '../api/potterpedia_api.dart';
 import '../nav/nav_drawer.dart';

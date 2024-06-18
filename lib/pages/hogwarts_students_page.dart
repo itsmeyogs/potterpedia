@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:potterpedia/api/potterpedia_api.dart';
-import 'package:provider/provider.dart';
 
-import '../main.dart';
 import '../nav/nav_drawer.dart';
 import '../widgets/item_character.dart';
 

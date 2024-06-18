@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:potterpedia/models/character.dart';
 import 'package:potterpedia/widgets/item_detail.dart';
@@ -67,78 +66,78 @@ class DetailPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(width: size.width/3,child: Padding(
-                        padding: const EdgeInsets.only(left: 23),
+                      SizedBox(width: size.width/3,child: const Padding(
+                        padding: EdgeInsets.only(left: 23),
                         child: Text("Alternate Names"),
                       )),
-                      Text(":"),
+                      const Text(":"),
                       SizedBox(
                         width: size.width/3,
                         child: character.alternateNames.isNotEmpty? Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: character.alternateNames.map((item)=>Text(item)).toList(),
-                        ): Text("-"),
+                        ): const Text("-"),
                       ),
                     ],
                   ),
-                  Divider(),
+                  const Divider(),
                   ItemDetail(name: "Species", value: character.species),
-                  Divider(),
+                  const Divider(),
                   ItemDetail(name: "Gender", value: character.gender),
-                  Divider(),
+                  const Divider(),
                   ItemDetail(name: "House", value: character.house),
-                  Divider(),
+                  const Divider(),
                   ItemDetail(name: "Date Of Birth", value: character.dateOfBirth!=null? character.dateOfBirth!:"-"),
-                  Divider(),
+                  const Divider(),
                   ItemDetail(name: "Wizard", value: character.wizard?"Yes":"No"),
-                  Divider(),
+                  const Divider(),
                   ItemDetail(name: "Ancestry", value: character.ancestry),
-                  Divider(),
+                  const Divider(),
                   ItemDetail(name: "Eye Colour", value: character.eyeColour),
-                  Divider(),
+                  const Divider(),
                   ItemDetail(name: "Hair Colour", value: character.hairColour),
-                  Divider(),
+                  const Divider(),
                   Column(
                     children: [
                       Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             border: Border(bottom: BorderSide())
                         ),
-                        child: Text("Wand"),
+                        child: const Text("Wand"),
                       ),
                       ItemDetail(name: "Wood", value: character.wand.wood),
                       ItemDetail(name: "Core", value: character.wand.core),
                       ItemDetail(name: "Length", value: character.wand.length!=null? "${character.wand.length!} inch" :"-")
                     ],
                   ),
-                  Divider(),
+                  const Divider(),
                   ItemDetail(name: "Patronus", value: character.patronus),
-                  Divider(),
+                  const Divider(),
                   ItemDetail(name: "Hogwarts Student", value: character.hogwartsStudent? "Yes":"No"),
-                  Divider(),
+                  const Divider(),
                   ItemDetail(name: "Hogwarts Staff", value: character.hogwartsStaff?"Yes":"No"),
-                  Divider(),
+                  const Divider(),
                   ItemDetail(name: "Actor", value: character.actor),
-                  Divider(),
+                  const Divider(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(width: size.width/3,child: Padding(
-                        padding: const EdgeInsets.only(left: 23),
+                      SizedBox(width: size.width/3,child: const Padding(
+                        padding: EdgeInsets.only(left: 23),
                         child: Text("Alternate Actors"),
                       )),
-                      Text(":"),
+                      const Text(":"),
                       SizedBox(
                         width: size.width/3,
                         child: character.alternateActors.isNotEmpty? Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: character.alternateActors.map((item)=>Text(item)).toList(),
-                        ): Text("-"),
+                        ): const Text("-"),
                       ),
                     ],
                   ),
-                  Divider(),
+                  const Divider(),
                   ItemDetail(name: "Alive", value: character.alive?"Yes":"No"),
                 ],
               ),

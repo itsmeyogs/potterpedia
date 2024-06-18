@@ -18,7 +18,7 @@ class ItemDetail extends StatelessWidget{
          padding: const EdgeInsets.only(left: 16),
          child: Text(name),
        )),
-       Text(":"),
+       const Text(":"),
        SizedBox(width: size.width/3,child: Padding(
          padding: const EdgeInsets.only(left: 8.0),
          child: Text(value),

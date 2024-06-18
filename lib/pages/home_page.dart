@@ -1,9 +1,7 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:potterpedia/api/potterpedia_api.dart';
 import 'package:potterpedia/widgets/item_character.dart';
-import 'package:provider/provider.dart';
 
 import '../nav/nav_drawer.dart';
 
