@@ -17,9 +17,9 @@ Aplikasi mobile flutter berisi tentang informasi seputar Harry Potter
 <img src="https://github.com/itsmeyogs/potterpedia/assets/113589887/e105234a-77dd-4d21-bc6a-609e3b956a49" width="180">
 
 
-<h2>Download Apk</h2>
+<h2>Download Apps</h2>
 
-<a href="https://github.com/itsmeyogs/potterpedia/releases/download/v1.0/app-release.apk">Download</a>
+<a href="https://github.com/itsmeyogs/potterpedia/releases">Download</a>
 
 
 
