@@ -28,10 +28,15 @@ class DetailPage extends StatelessWidget {
                 alignment: Alignment.center,
                 child: SizedBox(
                   width: size.width / 1.5,
-                  child: Image.network(
-                    character.image,
-                    fit: BoxFit.cover,
-                  ),
+                  child: character.image != ""
+                      ? Image.network(
+                          character.image,
+                          fit: BoxFit.cover,
+                        )
+                      : Image.asset(
+                          'images/no_available.png',
+                          fit: BoxFit.cover,
+                        ),
                 ),
               ),
             ),
@@ -66,17 +71,23 @@ class DetailPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(width: size.width/3,child: const Padding(
-                        padding: EdgeInsets.only(left: 23),
-                        child: Text("Alternate Names"),
-                      )),
+                      SizedBox(
+                          width: size.width / 3,
+                          child: const Padding(
+                            padding: EdgeInsets.only(left: 23),
+                            child: Text("Alternate Names"),
+                          )),
                       const Text(":"),
                       SizedBox(
-                        width: size.width/3,
-                        child: character.alternateNames.isNotEmpty? Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: character.alternateNames.map((item)=>Text(item)).toList(),
-                        ): const Text("-"),
+                        width: size.width / 3,
+                        child: character.alternateNames.isNotEmpty
+                            ? Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: character.alternateNames
+                                    .map((item) => Text(item))
+                                    .toList(),
+                              )
+                            : const Text("-"),
                       ),
                     ],
                   ),
@@ -87,9 +98,14 @@ class DetailPage extends StatelessWidget {
                   const Divider(),
                   ItemDetail(name: "House", value: character.house),
                   const Divider(),
-                  ItemDetail(name: "Date Of Birth", value: character.dateOfBirth!=null? character.dateOfBirth!:"-"),
+                  ItemDetail(
+                      name: "Date Of Birth",
+                      value: character.dateOfBirth != null
+                          ? character.dateOfBirth!
+                          : "-"),
                   const Divider(),
-                  ItemDetail(name: "Wizard", value: character.wizard?"Yes":"No"),
+                  ItemDetail(
+                      name: "Wizard", value: character.wizard ? "Yes" : "No"),
                   const Divider(),
                   ItemDetail(name: "Ancestry", value: character.ancestry),
                   const Divider(),
@@ -101,21 +117,28 @@ class DetailPage extends StatelessWidget {
                     children: [
                       Container(
                         decoration: const BoxDecoration(
-                            border: Border(bottom: BorderSide())
-                        ),
+                            border: Border(bottom: BorderSide())),
                         child: const Text("Wand"),
                       ),
                       ItemDetail(name: "Wood", value: character.wand.wood),
                       ItemDetail(name: "Core", value: character.wand.core),
-                      ItemDetail(name: "Length", value: character.wand.length!=null? "${character.wand.length!} inch" :"-")
+                      ItemDetail(
+                          name: "Length",
+                          value: character.wand.length != null
+                              ? "${character.wand.length!} inch"
+                              : "-")
                     ],
                   ),
                   const Divider(),
                   ItemDetail(name: "Patronus", value: character.patronus),
                   const Divider(),
-                  ItemDetail(name: "Hogwarts Student", value: character.hogwartsStudent? "Yes":"No"),
+                  ItemDetail(
+                      name: "Hogwarts Student",
+                      value: character.hogwartsStudent ? "Yes" : "No"),
                   const Divider(),
-                  ItemDetail(name: "Hogwarts Staff", value: character.hogwartsStaff?"Yes":"No"),
+                  ItemDetail(
+                      name: "Hogwarts Staff",
+                      value: character.hogwartsStaff ? "Yes" : "No"),
                   const Divider(),
                   ItemDetail(name: "Actor", value: character.actor),
                   const Divider(),
@@ -123,22 +146,29 @@ class DetailPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(width: size.width/3,child: const Padding(
-                        padding: EdgeInsets.only(left: 23),
-                        child: Text("Alternate Actors"),
-                      )),
+                      SizedBox(
+                          width: size.width / 3,
+                          child: const Padding(
+                            padding: EdgeInsets.only(left: 23),
+                            child: Text("Alternate Actors"),
+                          )),
                       const Text(":"),
                       SizedBox(
-                        width: size.width/3,
-                        child: character.alternateActors.isNotEmpty? Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: character.alternateActors.map((item)=>Text(item)).toList(),
-                        ): const Text("-"),
+                        width: size.width / 3,
+                        child: character.alternateActors.isNotEmpty
+                            ? Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: character.alternateActors
+                                    .map((item) => Text(item))
+                                    .toList(),
+                              )
+                            : const Text("-"),
                       ),
                     ],
                   ),
                   const Divider(),
-                  ItemDetail(name: "Alive", value: character.alive?"Yes":"No"),
+                  ItemDetail(
+                      name: "Alive", value: character.alive ? "Yes" : "No"),
                 ],
               ),
             )
