@@ -1,5 +1,5 @@
 <h2>About</h2>
-Aplikasi mobile flutter berisi tentang informasi seputar Harry Potter
+Aplikasi mobile flutter berisi tentang informasi seputar Harry Potter yang didapatkan dari RESTAPI <a href="https://hp-api.onrender.com/">https://hp-api.onrender.com/</a>
 
 <h2>Depedency</h2>
 1. http<br>
